@@ -20,7 +20,7 @@ Retorna a lista de todos os estados brasileiros com dados simplificados.
 
 **Exemplo de Requisição:**
 ```http
-GET http://localhost:3000/api/ibge/estados ´´´
+GET http://localhost:3000/api/ibge/estados
 
 
 
