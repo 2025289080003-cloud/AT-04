@@ -33,7 +33,7 @@ GET http://localhost:3000/api/ibge/estados
       "regiao": "Sudeste"
     }
   ]
-} ```
+} ´´´
 
 ### b) Municípios por Estado com Filtros
 **GET** /api/ibge/estados/:uf/municipios
