@@ -22,5 +22,18 @@ Retorna a lista de todos os estados brasileiros com dados simplificados.
 ```http
 GET http://localhost:3000/api/ibge/estados
 
+```json
+{
+  "success": true,
+  "count": 27,
+  "data": [
+    {
+      "id": 35,
+      "sigla": "SP",
+      "nome": "São Paulo",
+      "regiao": "Sudeste"
+    }
+  ]
+}
 
 
