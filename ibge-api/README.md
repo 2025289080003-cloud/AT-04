@@ -22,7 +22,7 @@ Retorna a lista de todos os estados brasileiros com dados simplificados.
 ```http
 GET http://localhost:3000/api/ibge/estados
 ```
-
+**Exemplo de Resposta:**
 ```json
 {
   "success": true,
@@ -39,11 +39,11 @@ GET http://localhost:3000/api/ibge/estados
 
 ```
 ### b) Municípios por Estado com Filtros
-**GET** '/api/ibge/estados/:uf/municipios'
+**GET** `/api/ibge/estados/:uf/municipios`
 
 Retorna os municípios de um estado específico com opções de filtro.
 
-Parâmetros:
+**Parâmetros:**
 
 - uf (path): Sigla do estado (ex: SP, RJ, MG)
 
@@ -51,7 +51,97 @@ Parâmetros:
 
 - limit (query): Limite de resultados
 
-Exemplo de Requisição:
+**Exemplo de Requisição:**
 
+```http
+GET http://localhost:3000/api/ibge/estados/SP/municipios?search=são&limit=5
+```
 
+**Exemplo de Resposta:**
+```json
+{
+  "success": true,
+  "uf": "SP",
+  "count": 5,
+  "data": [
+    {
+      "id": 3550308,
+      "nome": "São Paulo",
+      "microrregiao": "São Paulo",
+      "mesorregiao": "Metropolitana de São Paulo"
+    }
+  ]
+}
+```
+### c) Estatísticas por Região
+** GET ** `/api/ibge/estatisticas`
 
+Retorna estatísticas processadas sobre os estados brasileiros agrupados por região.
+
+**Exemplo de Requisição:**
+
+```http
+GET http://localhost:3000/api/ibge/estatisticas
+```
+
+**Exemplo de Resposta:**
+
+```json
+
+{
+  "success": true,
+  "estatisticas_gerais": {
+    "total_estados": 27,
+    "total_regioes": 5
+  },
+  "dados_por_regiao": [
+    {
+      "regiao": "Nordeste",
+      "quantidade_estados": 9,
+      "estados": [
+        { "sigla": "MA", "nome": "Maranhão" }
+      ]
+    }
+  ]
+}
+
+```
+
+### d) Resumo do Estado.
+
+**GET** `/api/ibge/estados/:uf/resumo`
+
+Retorna um resumo informativo completo sobre um estado específico.
+
+**Exemplo de Requisição:**
+
+```http
+GET http://localhost:3000/api/ibge/estados/SP/resumo
+```
+
+**Exemplo de Resposta:**
+
+```json
+
+{
+  "success": true,
+  "data": {
+    "estado": {
+      "sigla": "SP",
+      "nome": "São Paulo",
+      "regiao": "Sudeste"
+    },
+    "resumo_municipios": {
+      "total": 645,
+      "municipios_por_mesorregiao": {
+        "Metropolitana de São Paulo": 39,
+        "Campinas": 49
+      }
+    },
+    "informacoes_adicionais": {
+      "capital": "São Paulo",
+      "municipios_principais": ["São Paulo", "Campinas", "Guarulhos"]
+    }
+  }
+}
+´´´
