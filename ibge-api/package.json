@@ -1,0 +1,21 @@
+{
+  "name": "ibge-api",
+  "version": "1.0.0",
+  "description": "API para consumo de dados do IBGE - Estados e Municípios Brasileiros",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["ibge", "api", "estados", "municípios", "dados-abertos"],
+  "author": "Seu Nome",
+  "license": "MIT"
+}
