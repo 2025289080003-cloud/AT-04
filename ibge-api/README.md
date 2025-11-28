@@ -38,5 +38,20 @@ GET http://localhost:3000/api/ibge/estados
 }
 
 ```
+### b) Municípios por Estado com Filtros
+**GET** '/api/ibge/estados/:uf/municipios'
+
+Retorna os municípios de um estado específico com opções de filtro.
+
+Parâmetros:
+
+- uf (path): Sigla do estado (ex: SP, RJ, MG)
+
+- search (query): Filtro por nome do município
+
+- limit (query): Limite de resultados
+
+Exemplo de Requisição:
+
 
 
