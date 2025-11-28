@@ -21,7 +21,7 @@ Retorna a lista de todos os estados brasileiros com dados simplificados.
 **Exemplo de Requisição:**
 GET http://localhost:3000/api/ibge/estados
 
-json
+```json
 {
   "success": true,
   "count": 27,
@@ -34,5 +34,7 @@ json
     }
   ]
 }
+
+```markdown
 
 
