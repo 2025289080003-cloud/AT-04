@@ -35,8 +35,8 @@ GET http://localhost:3000/api/ibge/estados
   ]
 }
 
-b) Municípios por Estado com Filtros
-GET /api/ibge/estados/:uf/municipios
+### b) Municípios por Estado com Filtros
+**GET** /api/ibge/estados/:uf/municipios
 
 Retorna os municípios de um estado específico com opções de filtro.
 
